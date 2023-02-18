@@ -21,11 +21,11 @@ function createBoxes(amount) {
 	return elementsToAdd;
 }
 
-const destroyBoxes = () => {
+function destroyBoxes() {
 	boxes.innerHTML = "";
-};
+}
 
-btnCreate.addEventListener("click", () => {
+btnCreate.addEventListener("click", (e) => {
 	let boxesToAdd = createBoxes(input.value);
 	boxes.append(...boxesToAdd);
 });
